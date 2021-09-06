@@ -1,0 +1,107 @@
+@startuml
+
+!define COMMENT(x) <color:grey>x</color>
+
+' beginning of packages and classes declaration
+package Info <<Folder>>
+{
+    class InventoryList
+    {
+        + inventoryList : ObservableList <Item>
+
+        + createItem()
+        + deleteItem()
+        + deleteAllItems()
+    }
+
+    class Item
+    {
+        + itemName
+        + serialVal
+        + moneyValue
+
+        + formatMoneyValueFromInput()
+    }
+}
+
+class DatabaseManager << (S,#FF7700) static class >>
+{
+    + {static} saveFile(String extension, InventoryList inventoryList, MenuBar multipleMenuBar)
+
+    - {static} saveInventoryTSV(InventoryList inventoryList, String extension)
+    - {static} saveInventoryHTML(InventoryList inventoryList, String extension)
+    - {static} saveInventoryJSON(InventoryList inventoryList, String extension)
+
+    - {static} createFile(String pathToPlace)
+    - {static} editTSVFile(File createdFile, InventoryList givenList)
+    - {static} editHTMLFile(File createdFile, InventoryList givenList)
+    - {static} editJSONFile(File createdFile, InventoryList givenList)
+
+    + {static} loadInventory()
+
+
+
+}
+
+package Controllers <<Folder>>
+{
+    ' positioning class
+    class pos
+    hide pos
+
+    class AddItemController
+    {
+        - inventoryList : InventoryList
+        - sceneManager : SceneManager
+    }
+
+    class MainMenuController
+    {
+        - inventoryList : InventoryList
+        - sceneManager : SceneManager
+    }
+
+    class SceneManager
+    {
+        + listOfScenes : Map<String, Scene>
+    }
+
+    note top of SceneManager: loads all necessary controllers into a Map that\nfacilitates access to data stored from multiple windows
+}
+
+package Database <<Database>>
+{
+}
+
+package User_Interface <<Folder>>
+{
+    class UI << (U,#AE5FFF) >>
+    note right: represents the displayed interface\n (NOT a code-wise interface)
+}
+' end of packages and classes declaration
+
+
+' relations inside the "Controllers" package
+' ------------------------------------------
+SceneManager *-down- MainMenuController
+SceneManager *-down- AddItemController
+pos -down- SceneManager
+
+
+' relations inside the "Info" package
+' -----------------------------------
+InventoryList *-down- Item
+
+
+' connecting how the program will work
+' -------------------------------------
+Database -right> DatabaseManager : sends info for loading
+Database <-right DatabaseManager : gets info for saving
+Database <---> User_Interface : If there's any information retrieved from the data base,\n that info is sent to be displayed to the User Interface. \n\n When application is closed, check for any info to be saved.\n If any new changes was made by user, save it to the data base.
+User_Interface <---> Controllers : links the Controllers and the user interface , which is the bridge \n between the user inputs and the communication with the backend \n info stored, like created lists and items in each list.
+Controllers <----> Info : after user input is processed, stores the \n necessary info into a DS as necessary.
+
+
+
+
+@enduml

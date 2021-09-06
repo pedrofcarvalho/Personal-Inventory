@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="847.0" prefWidth="1154.0" style="-fx-background-color: #2D142C;" stylesheets="@../../../css%20_codes/file_header.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox layoutX="-6.0" layoutY="105.0" prefHeight="206.0" prefWidth="1154.0" style="-fx-background-color: #C72C41;" AnchorPane.bottomAnchor="536.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0" />
+      <HBox layoutX="-2.0" layoutY="267.0" prefHeight="217.0" prefWidth="1154.0" style="-fx-background-color: #801336;" AnchorPane.bottomAnchor="363.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="267.0" />
+      <HBox layoutX="1.0" layoutY="420.0" prefHeight="181.0" prefWidth="1154.0" style="-fx-background-color: #510A32;" AnchorPane.bottomAnchor="246.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="420.0" />
+      <HBox layoutY="-5.0" prefHeight="145.0" prefWidth="1154.0" style="-fx-background-color: #EE4540;" AnchorPane.bottomAnchor="707.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-5.0" />
+      <AnchorPane prefHeight="847.0" prefWidth="1154.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="77.0" layoutY="50.0" prefHeight="747.0" prefWidth="1000.0" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane layoutX="366.0" layoutY="14.0" prefHeight="56.0" prefWidth="268.0" style="-fx-background-color: white; -fx-border-color: grey;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="9.0" layoutY="2.0" prefHeight="56.0" prefWidth="268.0" text="User Manual" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="Consolas Bold Italic" size="27.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="88.0" layoutY="179.0" prefHeight="115.0" prefWidth="826.0" style="-fx-background-color: white; -fx-border-color: grey;">
+                     <children>
+                        <TextArea fx:id="text1" layoutX="1.0" layoutY="-12.0" prefHeight="199.0" prefWidth="381.0" text="• How to Use - click to open this screen&#10;• Load From List.. - choose a file and keep working on your previous&#10;list (TSV or HTML included)&#10;• Start New List - start a brand new list!" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="Consolas" size="16.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </AnchorPane>
+                  <Text layoutX="88.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Screen:">
+                     <font>
+                        <Font name="Consolas Bold Italic" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="88.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Main Menu:">
+                     <font>
+                        <Font name="Consolas Bold Italic" size="20.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="88.0" layoutY="405.0" prefHeight="250.0" prefWidth="826.0" style="-fx-background-color: white; -fx-border-color: grey;">
+                     <children>
+                        <TextArea fx:id="text2" layoutX="3.0" layoutY="2.0" prefHeight="302.0" prefWidth="802.0" text="• Add new item - redirected to another screen to add an item&#10;• Edit Item - 2 methods:&#10;    -  click on an existing item on the table&#10;    - select an item in the table and click the &quot;Edit Item&quot; button&#10;• Delete an Item - select an item in the table and click the &quot;Delete Item&quot; button&#10;• Search an item - just type on the text field by the search icon and type to &#10;look for items in the table&#10;• Saving Files - 2 options:&#10;    - TSV&#10;    - HTML" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="Consolas" size="16.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

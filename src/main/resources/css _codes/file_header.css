@@ -1,0 +1,74 @@
+
+ /*
+    table background change
+ */
+.table-view {
+    -fx-background-color: white;
+}
+
+ /*
+    not sure what changes
+ */
+.table-view .column-header-background .filler {
+    -fx-background-color: #36304a;
+}
+
+ /*
+    table header element changes
+ */
+.table-view .column-header .label {
+  -fx-alignment: CENTER;
+  -fx-text-fill: #36304a;
+  -fx-font-size: 16;
+  -fx-opacity: 1;
+  -fx-font-family: 'Consolas', Regular;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #36304a;
+    -fx-padding: 2.4px 0 2.4px 0;
+}
+
+ /*
+    not sure what changes
+ */
+.table-view .column-header {
+    -fx-background-color:white;
+}
+
+ /*
+    the text in the middle of the table (when it's empty) (CAN ONLY change manually in the .fxml file under <placeholder> bracket
+ */
+.table-view .placeholder .label {
+    -fx-text-fill: grey;
+    -fx-alignment: CENTER_LEFT;
+    -fx-opacity: 0.5;
+}
+
+ /*
+    menu bar text change
+ */
+.menu-bar .label {
+  -fx-text-fill: #2D142C;
+  -fx-font-size: 12;
+  -fx-font-family: 'Consolas', Regular;
+}
+
+ /*
+    menu items text change
+ */
+.menu-item .label  {
+    -fx-text-fill: black
+}
+
+/*.table-column .table-column-header-background {
+    -fx-background-color: blue;
+}*/
+
+.column-header-background .nested-column-header .column-header {
+    -fx-background-color: #FF7931;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: red;
+}

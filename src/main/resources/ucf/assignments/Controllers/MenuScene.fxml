@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="698.0" prefWidth="1052.0" style="-fx-background-color: #2D142C;" stylesheets="@../../../css%20_codes/file_header.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox layoutX="-6.0" layoutY="105.0" prefHeight="142.0" prefWidth="1052.0" style="-fx-background-color: #C72C41;" AnchorPane.bottomAnchor="451.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0" />
+      <HBox layoutX="-2.0" layoutY="225.0" prefHeight="110.0" prefWidth="1052.0" style="-fx-background-color: #801336;" AnchorPane.bottomAnchor="363.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="225.0" />
+      <HBox layoutX="1.0" layoutY="316.0" prefHeight="99.0" prefWidth="1052.0" style="-fx-background-color: #510A32;" AnchorPane.bottomAnchor="283.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="316.0" />
+      <HBox layoutY="-55.0" prefHeight="121.0" prefWidth="1052.0" style="-fx-background-color: #EE4540;" AnchorPane.bottomAnchor="577.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <HBox layoutX="10.0" layoutY="-45.0" prefHeight="25.0" prefWidth="1052.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="673.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar fx:id="multipleMenuBar" prefHeight="25.0" prefWidth="1056.0" style="-fx-text-fill: red; -fx-background-color: #757575;">
+              <menus>
+                <Menu mnemonicParsing="false" style="-fx-fill: white;" text="File">
+                  <items>
+                        <Menu fx:id="saveAsMenu" mnemonicParsing="false" text="Save as..">
+                          <items>
+                            <MenuItem fx:id="TSVMenuOption" mnemonicParsing="false" onAction="#TSVSaveButtonClicked" text="TSV" />
+                          <MenuItem fx:id="HTMLMenuOption" mnemonicParsing="false" onAction="#HTMLSaveButtonClicked" text="HTML" />
+                              <MenuItem fx:id="JSONMenuOption" mnemonicParsing="false" onAction="#JSONSaveButtonClicked" text="JSON" />
+                          </items>
+                        </Menu>
+                        <MenuItem fx:id="closeAppOpt" mnemonicParsing="false" onAction="#closeMenuClicked" text="Close" />
+                  </items>
+                </Menu>
+                <Menu fx:id="helpMenu" mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="userManualMenuOpt" mnemonicParsing="false" onAction="#userManualMenuCLicked" text="User Manual" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+      <AnchorPane layoutY="25.0" prefHeight="677.0" prefWidth="1052.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
+         <children>
+            <TableView fx:id="itemTable" layoutX="95.0" layoutY="148.0" prefHeight="440.0" prefWidth="818.0">
+                <placeholder>
+                    <Label text="This works!" />
+                </placeholder>
+               <columns>
+                  <TableColumn fx:id="nameCol" editable="false" prefWidth="261.0" text="Item Name" />
+                  <TableColumn fx:id="serialNumCol" prefWidth="295.0" text="Serial Number" />
+                  <TableColumn fx:id="dolValCol" minWidth="0.0" prefWidth="261.0" text="Value" />
+               </columns>
+            </TableView>
+            <HBox layoutX="378.0" layoutY="91.0" prefHeight="52.0" prefWidth="318.0" AnchorPane.bottomAnchor="555.0" AnchorPane.leftAnchor="378.0" AnchorPane.rightAnchor="356.0" AnchorPane.topAnchor="91.0">
+               <children>
+                  <TextField fx:id="searchBar" prefHeight="31.0" prefWidth="255.0">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin></TextField>
+                  <ImageView fitHeight="31.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@application_images/search_icon.png" />
+                     </image></ImageView>
+               </children>
+            </HBox>
+            <Button fx:id="changeSceneTestBtn" layoutX="441.0" layoutY="615.0" mnemonicParsing="false" onAction="#createItemBtnClicked" prefHeight="25.0" prefWidth="126.0" text="Create New  Item" />
+            <Button fx:id="deleteBtn" layoutX="175.0" layoutY="615.0" mnemonicParsing="false" onAction="#deleteBtnClicked" prefHeight="25.0" prefWidth="126.0" text="Delete Item" />
+            <Button fx:id="clearListBtn" layoutX="708.0" layoutY="615.0" mnemonicParsing="false" onAction="#clearListBtnClicked" prefHeight="25.0" prefWidth="126.0" text="Clear List" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
