@@ -61,6 +61,12 @@ package Controllers <<Folder>>
         - sceneManager : SceneManager
     }
 
+    class WelcomeController
+    {
+        - inventoryList : InventoryList
+        - sceneManager : SceneManager
+    }
+
     class SceneManager
     {
         + listOfScenes : Map<String, Scene>
@@ -72,6 +78,7 @@ package Controllers <<Folder>>
 package Database <<Database>>
 {
 }
+note left of Database: data is stored locally
 
 package User_Interface <<Folder>>
 {
@@ -85,6 +92,7 @@ package User_Interface <<Folder>>
 ' ------------------------------------------
 SceneManager *-down- MainMenuController
 SceneManager *-down- AddItemController
+SceneManager *-down- WelcomeController
 pos -down- SceneManager
 
 
