@@ -5,7 +5,6 @@ import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
@@ -13,6 +12,7 @@ import javafx.stage.Stage;
 import ucf.assignments.DatabaseManager;
 import ucf.assignments.Info.InventoryList;
 import ucf.assignments.Info.Item;
+import ucf.assignments.InputChecker;
 
 import java.net.URL;
 import java.util.ResourceBundle;

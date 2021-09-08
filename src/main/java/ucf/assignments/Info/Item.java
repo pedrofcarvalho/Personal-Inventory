@@ -1,7 +1,7 @@
 package ucf.assignments.Info;
 
 import javafx.beans.property.SimpleStringProperty;
-import ucf.assignments.Controllers.InputChecker;
+import ucf.assignments.InputChecker;
 
 import java.util.Locale;
 

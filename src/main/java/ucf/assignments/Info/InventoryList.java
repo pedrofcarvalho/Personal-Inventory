@@ -16,11 +16,6 @@ public class InventoryList implements Serializable
         this.itemList = FXCollections.observableArrayList(); // initializes observableList as arraylist
     }
 
-    public InventoryList(ObservableList<Item> itemList)
-    {
-        this.itemList = itemList;
-    }
-
     // getter
     public ObservableList<Item> getItemList()
     {

@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import ucf.assignments.Info.InventoryList;
+import ucf.assignments.InputChecker;
 
 import java.net.URL;
 import java.util.ResourceBundle;

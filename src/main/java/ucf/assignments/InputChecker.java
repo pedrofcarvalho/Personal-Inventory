@@ -1,4 +1,4 @@
-package ucf.assignments.Controllers;
+package ucf.assignments;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
