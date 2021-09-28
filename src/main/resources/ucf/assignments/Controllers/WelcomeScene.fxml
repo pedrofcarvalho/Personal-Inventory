@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
@@ -35,14 +37,19 @@
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="362.0" layoutY="149.0" prefHeight="121.0" prefWidth="329.0" text="Welcome to &lt;Personal Inventory&gt;" textAlignment="CENTER" textFill="#00ff09" wrapText="true">
+            <Label alignment="CENTER" layoutX="244.0" layoutY="88.0" prefHeight="121.0" prefWidth="470.0" text="Item Holder" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="Consolas Bold Italic" size="21.0" />
                </font>
             </Label>
-            <Button fx:id="howToUseBtn" layoutX="184.0" layoutY="454.0" mnemonicParsing="false" onAction="#howToUseBtnClicked" text="How to Use" />
-            <Button fx:id="loadListBtn" layoutX="478.0" layoutY="454.0" mnemonicParsing="false" onAction="#loadListBtnClicked" text="Load list from..." />
-            <Button fx:id="startNewListBtn" layoutX="762.0" layoutY="454.0" mnemonicParsing="false" onAction="#startNewListBtnClicked" text="Start New List" />
+            <Button fx:id="howToUseBtn" layoutX="87.0" layoutY="454.0" mnemonicParsing="false" onAction="#howToUseBtnClicked" text="How to Use" />
+            <Button fx:id="loadListBtn" layoutX="430.0" layoutY="454.0" mnemonicParsing="false" onAction="#loadListBtnClicked" text="Load list from..." />
+            <Button fx:id="startNewListBtn" layoutX="801.0" layoutY="454.0" mnemonicParsing="false" onAction="#startNewListBtnClicked" text="Start New List" />
+            <ImageView fitHeight="208.0" fitWidth="213.0" layoutX="375.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@application_images/cool_backpack.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
